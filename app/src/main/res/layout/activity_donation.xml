@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/petcareap2">
+
+    <EditText
+        android:id="@+id/editTextDonationAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Enter Donation Amount"
+        android:inputType="numberDecimal" />
+
+    <Spinner
+        android:id="@+id/spinnerPetCharity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDonationAmount"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/buttonDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerPetCharity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Donate" />
+
+</RelativeLayout>

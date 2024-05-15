@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/petcareap2">
+
+    <RelativeLayout
+        android:id="@+id/layoutOwnerProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewOwnerProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/petcareap27" />
+
+        <TextView
+            android:id="@+id/textViewOwnerProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/imageViewOwnerProfile"
+            android:text="Owner Profile"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutDonation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutOwnerProfile"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewDonation"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/petcareap26" />
+
+        <TextView
+            android:id="@+id/textViewDonation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/imageViewDonation"
+            android:text="Donation"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutAccountSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutDonation"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewAccountSettings"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/petcareap28" />
+
+        <TextView
+            android:id="@+id/textViewAccountSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/imageViewAccountSettings"
+            android:text="Account settings"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutHelpCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutAccountSettings"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewHelpCenter"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/petcareap29" />
+
+        <TextView
+            android:id="@+id/textViewHelpCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/imageViewHelpCenter"
+            android:text="Help Center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
