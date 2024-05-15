@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,7 +21,9 @@ public class OwnerprofileActivity extends AppCompatActivity {
 
     private TextView textViewStoreName, textViewPhoneNumber, textViewEmail;
     private DatabaseReference databaseReference;
-    private Button btnshowmyprofile;
+    private Button btnshowmypet;
+    private Button btnsignout;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +33,21 @@ public class OwnerprofileActivity extends AppCompatActivity {
         textViewStoreName = findViewById(R.id.textViewStoreName);
         textViewPhoneNumber = findViewById(R.id.textViewPhoneNumber);
         textViewEmail = findViewById(R.id.textViewEmail);
-        btnshowmyprofile=findViewById(R.id.button);
-        btnshowmyprofile.setOnClickListener(new View.OnClickListener() {
+        btnshowmypet=findViewById(R.id.button);
+        btnsignout=findViewById(R.id.button3);
+        btnshowmypet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(OwnerprofileActivity.this,MypetActivity.class);
                 startActivity(intent);
 
+            }
+        });
+        btnsignout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                signOutUser();
             }
         });
         databaseReference = FirebaseDatabase.getInstance().getReference("My Profile");
@@ -63,5 +74,11 @@ public class OwnerprofileActivity extends AppCompatActivity {
 
         });
 
+    }
+    public void signOutUser(){
+        Intent intent=new Intent(OwnerprofileActivity.this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 }

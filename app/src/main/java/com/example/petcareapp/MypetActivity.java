@@ -40,7 +40,7 @@ public class MypetActivity extends AppCompatActivity {
                             a.clear();;
                             for (DataSnapshot snapshot1:snapshot.getChildren()){
                                 MyPet i=snapshot1.getValue(MyPet.class);
-                                String t=i.getEdPetname()+':'+i.getEdPettype()+":"+i.getEdPetbreed();
+                                String t="Name:"+i.getEdPetname()+"/nType"+i.getEdPettype()+"/nBreed"+i.getEdPetbreed();
                                 a.add(t);
                             }
                             adapter.notifyDataSetChanged();
